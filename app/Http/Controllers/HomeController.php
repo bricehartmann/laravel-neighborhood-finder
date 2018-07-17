@@ -39,7 +39,7 @@ class HomeController extends Controller
     const ROUTE_NAME_SHOW_HOME = 'home.show';
 
     /**
-     * Show the home page.
+     * Shows the home page.
      *
      * @return \Illuminate\View\View
      */
@@ -48,6 +48,12 @@ class HomeController extends Controller
         return view('home');
     }
 
+    /**
+     * Handles submission of an address and returns a redirect to the home page with success or error message.
+     *
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function submit(Request $request)
     {
         // validate the request
